@@ -756,7 +756,7 @@ input.text {
 	document.write (+zaklOffDay);
 
 </script>
-<!--
+
 <?php
 if (isset($_POST['u_date']))
 {
@@ -767,8 +767,8 @@ else
 {
     echo "<script type='text/javascript'>";
     echo "document.write('<form method=\'post\'>');";
-    echo "document.write('<p>Ваше имя:<br />');";
-    echo "document.write('<input type=\'text\' name=\'u_name\' value = \'' + userName3 + '\'</p>');";
+    echo "document.write('<p>Дата окончания:<br />');";
+    echo "document.write('<input type=\'text\' name=\'u_date\' value = \'' + zaklOffDay + '\'</p>');";
     echo "document.write('<input type=\'submit\' />');";
     echo "document.write('</form>');";
     echo "</script>";
@@ -776,6 +776,6 @@ else
     exit();
 }
 ?>
--->
+
 </body>
 </html>
