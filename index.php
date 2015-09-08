@@ -1,62 +1,9 @@
 <html lang="ru">
 		<head>
 			
-			<!-- Beta Version. Разработано для клана СССР персонажем Connection Failed -->
-			<script type="text/javascript" src="moment.js">
-	var daysAll=+document.forms["zakl"]["Form_2"].value;
-	var hours=+document.forms["zakl"]["Form_3"].value;
-	var zaklOffDay=moment().add('days', daysAll );
-			</script>
+			
 			<meta charset="utf-8"/>
 			<link rel="stylesheet" href="css/style.css"/>
-			<style type="text/css">
-			.beg {
-.input-container  select  {
-    border-radius: 70px;
-    height: 220px;
-    width: 460px;
-}
-			</style>
-			<!-- ........................Скрипты проверки на заполненность полей........................ -->
-			<!-- Проверяем заполнено ли поле название вещи -->
-			<script type="text/javascript">
-function validateForm()
-{
-var x=document.forms["zakl"]["Form_1"].value;
-if (x==null || x=="")
-  {
-  alert("Название обязательно должно быть введено!");
-  return false;
-  }
-}
-</script>
-<!-- Проверяем заполнено ли часы -->
-<script type="text/javascript">
-function validateForm()
-{
-var x=document.forms["zakl"]["Form_3"].value;
-if (x==null || x=="")
-  {
-  alert("Введите количество оставшихся часов!");
-  return false;
-  }
-}
-</script>
-<!-- Стиль формы -->
-<style type="text/css">
-input.text {
-    width:  200px;
-    height: 15px;
-    padding: 5px 10px 5px 10px;
-    border:1px solid #999;
-    font-size:16px;
-    font-family: Tahoma;
-}
-</style>
-
-
-
-
 		</head>
 			<body>
 <!-- Поле для ввода названия вещи (с поддержкой выпадающего списка вещей для помощи при вводе)	-->			
@@ -746,36 +693,7 @@ input.text {
 </form>
 <br>
 
-<!-- Получаем и обрабатываем данные, введенные пользователем -->
-<!-- Передаем данные js в php -->
-<!-- Подключаем скрипт работы с датой и временем -->
 
-<script type="text/javascript">
-	
-	document.write ('Дата окончания:');
-	document.write (+zaklOffDay);
-
-</script>
-
-<?php
-if (isset($_POST['u_date']))
-{
-    echo $_POST['u_date'] . '</p>';
-}
-
-else
-{
-    echo "<script type='text/javascript'>";
-    echo "document.write('<form method=\'post\'>');";
-    echo "document.write('<p>Дата окончания:<br />');";
-    echo "document.write('<input type=\'text\' name=\'u_date\' value = \'' + zaklOffDay + '\'</p>');";
-    echo "document.write('<input type=\'submit\' />');";
-    echo "document.write('</form>');";
-    echo "</script>";
-
-    exit();
-}
-?>
 
 </body>
 </html>
